@@ -1,83 +1,94 @@
 #include <stdio.h>
 
-
 struct Carta { //CRIA UM NOVO TIPO DE DADO
     int Populacao, Pontos_Turisticos;
     float km2, PIB; 
     char Estado[50], Codigo_da_carta[50], Cidade[50];
 };
 
-
-int main() { // int main() indica para o sistema que o programa vai retornar um código de status (0 = OK)
-
+int main() {
     struct Carta c1;
     struct Carta c2;
 
+    // MENSAGEM DE BOAS-VINDAS
+    printf("=============================================\n");
+    printf("     Bem vindo ao jogo Super Trunfo Paises\n");
+    printf("=============================================\n\n");
+    printf("Voce vai cadastrar duas cartas com informacoes de cidades.\n");
+    printf("Siga as instrucoes cuidadosamente para cada carta.\n\n");
+
     //INFORMAÇÕES CARTA 1
+    printf("=== CADASTRO DA CARTA 1 ===\n");
 
-    printf("Digite o Estado da Carta 1:\n"); // printf exibe mensagens ou valores na tela (saída do programa)
-    scanf("%s", c1.Estado); // scanf lê dados digitados pelo usuário e guarda nas variáveis.
+    printf("Digite o Estado da Carta 1: ");
+    scanf("%s", c1.Estado);
 
-    printf("Digite o Codigo da carta:\n A letra do estado seguida de um numero de 01 a 04 ex: A01, B02\n");
+    printf("Digite o Codigo da carta (Ex: A01, B02): ");
     scanf("%s", c1.Codigo_da_carta);
 
-    printf("Digite o Nome da Cidade:\n");
+    printf("Digite o Nome da Cidade: ");
     scanf("%s", c1.Cidade);
 
-    printf("Digite a Populacao:\n");
+    printf("Digite a Populacao: ");
     scanf("%d", &c1.Populacao);
 
-    printf("Digite a Area em km2:\n");
+    printf("Digite a Area em km2: ");
     scanf("%f", &c1.km2);
 
-    printf("Digite o PIB da Cidade:\n");
+    printf("Digite o PIB da Cidade: ");
     scanf("%f", &c1.PIB);
 
-    printf("Digite a Quantidade de Pontos Turisticos:\n");
+    printf("Digite a Quantidade de Pontos Turisticos: ");
     scanf("%d", &c1.Pontos_Turisticos);
 
     //INFORMAÇÕES CARTA 2
+    printf("\n=== CADASTRO DA CARTA 2 ===\n");
 
-    printf("\nDigite o Estado da Carta 2:\n");
+    printf("Digite o Estado da Carta 2: ");
     scanf("%s", c2.Estado);
 
-    printf("Digite o Codigo da carta:\n A letra do estado seguida de um numero de 01 a 04 ex: A01, B02\n");
+    printf("Digite o Codigo da carta (Ex: A01, B02): ");
     scanf("%s", c2.Codigo_da_carta);
 
-    printf("Digite o Nome da Cidade:\n");
+    printf("Digite o Nome da Cidade: ");
     scanf("%s", c2.Cidade);
 
-    printf("Digite a Populacao:\n");
+    printf("Digite a Populacao: ");
     scanf("%d", &c2.Populacao);
 
-    printf("Digite a Area em km2:\n");
+    printf("Digite a Area em km2: ");
     scanf("%f", &c2.km2);
 
-    printf("Digite o PIB da Cidade:\n");
+    printf("Digite o PIB da Cidade: ");
     scanf("%f", &c2.PIB);
 
-    printf("Digite a Quantidade de Pontos Turisticos:\n");
+    printf("Digite a Quantidade de Pontos Turisticos: ");
     scanf("%d", &c2.Pontos_Turisticos);
 
-    // IMPRESSAO
-
-    printf("\nCARTA 1\n");
+    // IMPRESSÃO DAS CARTAS
+    printf("\n=============================================\n");
+    printf("                    CARTA 1\n");
+    printf("=============================================\n");
     printf("Estado: %s\n", c1.Estado);
     printf("Codigo da carta: %s\n", c1.Codigo_da_carta);
     printf("Cidade: %s\n", c1.Cidade);
     printf("Populacao: %d\n", c1.Populacao);
-    printf("Area em km2: %f\n", c1.km2);
-    printf("PIB: %f\n", c1.PIB);
+    printf("Area em km2: %.2f\n", c1.km2);
+    printf("PIB: %.2f\n", c1.PIB);
     printf("Pontos turisticos: %d\n", c1.Pontos_Turisticos);
 
-    printf("\nCARTA 2\n");
+    printf("\n=============================================\n");
+    printf("                    CARTA 2\n");
+    printf("=============================================\n");
     printf("Estado: %s\n", c2.Estado);
     printf("Codigo da carta: %s\n", c2.Codigo_da_carta);
     printf("Cidade: %s\n", c2.Cidade);
     printf("Populacao: %d\n", c2.Populacao);
-    printf("Area em km2: %f\n", c2.km2);
-    printf("PIB: %f\n", c2.PIB);
+    printf("Area em km2: %.2f\n", c2.km2);
+    printf("PIB: %.2f\n", c2.PIB);
     printf("Pontos turisticos: %d\n", c2.Pontos_Turisticos);
+
+    printf("\nObrigado por jogar o Super Trunfo Paises!\n");
 
     return 0;
 }
